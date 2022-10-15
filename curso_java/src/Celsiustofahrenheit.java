@@ -8,9 +8,9 @@ public class Celsiustofahrenheit {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 	
-		char resp = 's';
-		
-		while (resp != 'n') {
+		char resp;
+	
+		do {
 			System.out.print("Digite a temperatura em Celsius: ");
 			double C = sc.nextDouble();
 			double F = 9.0 * C / 5.0 + 32.0;
@@ -18,7 +18,7 @@ public class Celsiustofahrenheit {
 			
 			System.out.print("Deseja repetir a consulta (s/n)? ");
 			resp = sc.next().charAt(0);
-		}
+		} while (resp != 'n');
 		
 		sc.close();
 
