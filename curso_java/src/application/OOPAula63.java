@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import entities.Triangle;
 
-public class OPPAula63 {
+public class OOPAula63 {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
