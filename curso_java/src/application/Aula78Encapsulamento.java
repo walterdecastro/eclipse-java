@@ -3,12 +3,13 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entities.Product;
+import entities.ProductAula78;
 
-public class Aula75Construtores {
+
+public class Aula78Encapsulamento {
 
 	public static void main(String[] args) {
-
+		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
@@ -17,14 +18,19 @@ public class Aula75Construtores {
 		String name = sc.nextLine();
 		System.out.print("Price: ");
 		double price = sc.nextDouble();
-		Product product = new Product(name, price);
+		System.out.print("Quantity: ");
+		int quantity = sc.nextInt();
+		ProductAula78 product = new ProductAula78(name, price, quantity);
+		
+		product.setName("Computer");
+		System.out.println("Updated name: " + product.getName());
 
 		System.out.println();
 		System.out.println("Product data: " + product);
 
 		System.out.println();
 		System.out.print("Enter the number of products to be added in stock: ");
-		int quantity = sc.nextInt();
+		quantity = sc.nextInt();
 		product.addProducts(quantity);
 
 		System.out.println();
@@ -41,5 +47,4 @@ public class Aula75Construtores {
 		sc.close();
 
 	}
-
 }
